@@ -1,0 +1,44 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class ATM 
+{
+ public static void notes()
+ {
+	 int amt=0,a=0,b=0,c=0;
+	 System.out.println("enter your amount");
+	 Scanner s= new Scanner(System.in);
+	 amt=s.nextInt();
+	 if(amt%100==0)
+	 {
+	 if(amt>=2000)
+	 {
+		 a=amt/2000;
+		 System.out.println("2000 rupees notes are:"+a);
+	 }
+	 else if(amt>=500)
+	 {
+		 b=amt/500;
+		 amt=amt-(b*500);
+		 System.out.println("500 rupees notes are:"+b);
+	 }
+	 else if(amt>=100)
+	 {
+		c=amt/100;
+		System.out.println("500 ruppes notes are:"+c);
+	 }
+ }
+	 else
+	 {
+		 System.out.println("invalid amount");
+	 }
+	 
+ }
+	public static void main(String[] args)
+	{
+	ATM a=new ATM();
+	a.notes();
+	}
+
+}
