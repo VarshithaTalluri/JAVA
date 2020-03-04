@@ -1,0 +1,38 @@
+package studentdetails;
+
+import java.util.Scanner;
+
+public class Studentdetails
+{
+ public void details()
+ {
+	 long mob;
+	 String name,email;
+	 char ch;
+	 Scanner s = new Scanner(System.in);
+	 System.out.println("enter student name");
+	 name=s.nextLine();
+	 if(name.length()>=3)
+	 System.out.println("name:"+name);
+	 else {
+	 System.out.println("invalid name,name must contain atleast 3 characters");}
+	 System.out.println("enter email");
+	 email=s.nextLine();
+	 if(email.contains(".") && email.contains("@"))
+	 {
+		 System.out.println("email:"+email);
+	 }
+	 else
+	 {
+		 System.out.println("invalid email");
+	 }
+	 System.out.print("enter mobile number");
+	 mob=s.nextLong();
+	 System.out.println("mobile number:"+mob);
+	 }
+public static void main(String[] args) 
+{
+	Studentdetails s =new Studentdetails();
+    s.details();
+}
+};
