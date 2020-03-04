@@ -1,0 +1,38 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class Palindrome
+{
+ public void reverse()
+ {
+	 int num,rem=0,rev=0,temp=0;
+	 Scanner s = new Scanner(System.in);
+	 System.out.println("enter num to find palindrome or not");
+	 num=s.nextInt();
+	 temp=num;
+	while(num!=0)
+	{
+		rem=num%10;
+		rev=rev*10+rem;
+		num=num/10;	
+	}
+	num=temp;
+	if(rev==num)
+	{
+		System.out.println("palindrome");
+	}
+	else
+	{
+		System.out.println("not palindrome");
+	}
+ }
+	
+
+public static void main(String[] args)
+{
+ Palindrome p=new Palindrome();
+p. reverse();
+}
+
+}
