@@ -1,0 +1,25 @@
+
+package VARSHITHA;
+import java.util.Scanner;
+public class rev
+{
+public static void revofnum()
+{
+	int num=0,rev=0,rem=0;
+	System.out.println("enter num to reverse it");
+	Scanner s =new Scanner(System.in);
+	num=s.nextInt();
+	while(num!=0)
+	{
+		rem=num%10;
+		rev=rev*10+rem;
+		num=num/10;
+	}
+	System.out.println("rev of num"+rev);
+}
+public static void main()
+{
+	rev r=new rev();
+	r.revofnum();
+}
+};
