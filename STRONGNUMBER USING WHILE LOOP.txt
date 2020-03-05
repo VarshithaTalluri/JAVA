@@ -1,0 +1,43 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class Strongnumber
+{
+	public static void snum()
+	{
+		int num=0,temp=0,rem=0,fact=1,sum=0,i=0;
+		System.out.println("enter number");
+		Scanner s = new Scanner(System.in);
+		num=s.nextInt();
+		temp=num;
+		while(temp!=0)
+		{
+			rem=num%10;
+			for(i=1;i<=rem;i++)
+			{
+				fact=fact*i;
+			}
+			sum=sum+fact;
+			num=num/10;
+		}
+		System.out.println("sum:"+sum);
+		num=temp;
+		if(sum==num)
+		{
+			System.out.println("strong number");
+		}
+		else
+		{
+			System.out.println("not strong number");
+		}
+	}
+	
+
+	public static void main(String[] args) 
+	{
+		Strongnumber s=new Strongnumber();
+		s.snum();
+	}
+
+}
