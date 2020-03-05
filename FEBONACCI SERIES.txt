@@ -1,0 +1,27 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class Febonacci
+{
+   public static void feb() 
+   {
+	   int first=1,second=1,sum=0,i=0,n=0;
+	   System.out.println("enter n value");
+	   Scanner s =new Scanner(System.in);
+	   n=s.nextInt();
+	   for(i=1;i<=n;i++)
+	   {
+		   first=second;
+		   second=sum;
+		   sum=first+sum;
+		   System.out.println(+sum);
+	  }
+   }
+	public static void main(String[] args) 
+	{
+	Febonacci f=new Febonacci();
+	f.feb();
+	}
+
+}
