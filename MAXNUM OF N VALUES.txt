@@ -1,0 +1,32 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+public class maxnum 
+{
+	public static void max()
+	{
+		int n=0,num=0,max=0,i=0;
+		System.out.println("enter n value");
+		Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		System.out.println("enter n values"+n);
+		for(i=0;i<=n;i++)
+		{
+			num=s.nextInt();
+			if(max<num)
+			{
+				max=num;
+			}
+		}
+		System.out.println("maxnum:"+max);
+		
+	}
+
+	public static void main(String[] args)
+	{
+		maxnum m= new maxnum();
+		m.max();
+
+	}
+
+}
