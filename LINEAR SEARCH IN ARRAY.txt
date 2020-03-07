@@ -1,0 +1,46 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class Linearsearch 
+{
+	public static void lsearch()
+	{
+		int n=0,search,i=0,j=0,flag=0;
+		int arr[];
+		arr = new int[5]; 
+		System.out.println("enter n values");
+		Scanner s =new Scanner(System.in);
+		n=s.nextInt();
+		System.out.println("enter n values"+n);
+		for(i=0;i<n;i++)
+		{
+			arr[i]=s.nextInt();
+		}
+		System.out.println("enter search element");
+		search=s.nextInt();
+		for(i=0;i<n;i++)
+		{
+			if(search==arr[i])
+			{
+				flag++;
+			}
+		}
+		if(flag>=1)
+		{
+			System.out.println("your element is in array");
+		}
+		else
+		{
+			System.out.println("your search element is not there in array");
+		}
+		
+	}
+
+	public static void main(String[] args)
+	{
+     Linearsearch l=new Linearsearch();
+     l.lsearch();
+	}
+
+}
