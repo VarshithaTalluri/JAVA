@@ -1,0 +1,43 @@
+package VARSHITHA;
+
+import java.util.Scanner;
+
+public class Merging 
+{
+	public static void mergofarr()
+	{
+		int n=0,i=0,j=0;
+		int arra[],arrb[],arrc[];
+		arra=new int[5];
+		arrb=new int[5];
+		arrc=new int[10];
+		System.out.println("enter 5 values");
+		Scanner s =new Scanner(System.in);
+		for(i=0;i<5;i++)
+		{
+			arra[i]=s.nextInt();
+			arrc[i]=arra[i];
+		}
+		System.out.println("enter 5 values");
+		for(j=0;j<5;j++)
+		{
+			arrb[j]=s.nextInt();
+			arrc[i]=arrb[j];
+			i++;
+		}
+		
+		for(i=0;i<10;i++)
+		{
+			System.out.println(arrc[i]);
+		}
+		
+	}
+
+	public static void main(String[] args) 
+	{
+		Merging m=new Merging();
+		m.mergofarr();
+
+	}
+
+}
