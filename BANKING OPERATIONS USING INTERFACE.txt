@@ -1,0 +1,118 @@
+package varshitha;
+
+public interface Bank 
+{
+	public void validation();
+	public void withdraw();
+	public void deposite();
+	
+
+}
+=======================================
+package varshitha;
+
+import java.util.Scanner;
+
+  public  class Operations implements Bank
+{
+	int pin,amt,acbal;
+	public void options()
+	{
+		int opt=0;
+		Scanner s= new Scanner(System.in);
+		System.out.println("1.deposite");
+		System.out.println("2.withdraw");
+		do
+		{
+		System.out.println("enter your choice");
+		opt=s.nextInt();
+		if(opt==1)
+		{
+			deposite();
+		}
+		else if(opt==2)
+		{
+			withdraw();
+		}
+			
+		}
+		while(opt!=0);
+	}
+	public void validation() 
+	{
+		System.out.println("enter pin");
+		Scanner s= new Scanner(System.in);
+		pin=s.nextInt();
+		if(pin==1234)
+		{
+			System.out.println("true");
+			options();
+		}
+		else
+		{
+			System.out.println("false");
+		}
+	}
+	public void  withdraw()
+	{
+		
+		System.out.println("enter amount to withdraw");
+		Scanner s=new Scanner(System.in);
+		amt=s.nextInt();
+		if(amt%100==0)
+		{
+			if(amt>=2000)
+			{
+				int a=amt/2000;
+				amt=amt-(a*2000);
+				System.out.println("2000 notes are"+a);
+			}
+			if(amt>=500)
+			{
+				int b=amt/500;
+				amt=amt-(b*500); 
+				System.out.println("500 notes are"+b);
+			}
+			if(amt>=100)
+			{
+				int c=amt/100;
+				System.out.println("100 notes are"+c);
+			}
+			acbal=acbal-amt;
+			System.out.println("account balance is;"+acbal);
+		}
+		else
+		{
+			System.out.println("INVALID AMOUNT");
+		}
+		
+	}
+	public void deposite()
+	{
+		System.out.println("enter amount to deposite");
+		Scanner s = new Scanner(System.in);
+		amt=s.nextInt();
+		if(amt%100==0)
+		{
+			acbal=acbal+amt;
+			System.out.println("your account balance is:"+acbal);
+		}
+		else
+		{
+			System.out.println("INVALID AMOUNT");
+		}
+    }
+
+}
+=================================================================================
+package varshitha;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Operations o=new Operations();
+		o.validation();
+	}
+
+}
